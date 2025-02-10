@@ -9,6 +9,26 @@ void main() {
   printGreetingNamed();
   printGreetingNamed(personName: "Rich");
   printGreetingNamed(personName: "Mary", clientId: 001);
+
+  // 익명 함수
+  int value = 5;
+  
+  // 5. 화살표 함수
+  int ex1Squared(num1) => num1 * num1;
+  int ex1Cubed(num1) => num1 * num1 * num1;
+  
+  // 6. 중괄호 일반 함수
+  int ex2Squared(num2) {
+    return num2 * num2;
+  }
+  int ex2Cubed(num2) {
+    return num2 * num2 * num2;
+  }
+  
+  print('EX1-Squared: ${ex1Squared(value)}');
+  print('EX1-Cubed: ${ex1Cubed(value)}');
+  print('EX2-Squared: ${ex2Squared(value)}');
+  print('EX2-Cubed: ${ex2Cubed(value)}');
 }
 
 // 1. 함수 선언
