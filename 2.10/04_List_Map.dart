@@ -77,4 +77,25 @@ void main() {
 
   // 특정 키 해당하는 값 출력
   print(mapMonth[1]); // January 출력
+
+  // 맵 심화
+  Map<String, int> scores = {
+    'Alice': 100,
+    'Bob': 90,
+    'Charlie': 80,
+  };
+
+  // 키 존재 여부 확인
+  print(scores.containsKey('Alice')); // true 출력
+
+  // 값 존재 여부 확인
+  print(scores.containsValue(90)); // true 출력
+
+  // 키-값 쌍 제거
+  scores.remove('Charlie');
+  print(scores); // Alice, Bob 출력
+
+  // 점수를 5점씩 증가시킨 새로운 맵 생성
+  Map<String, int> updatedScores = scores.map((key, value) => MapEntry(key, value + 5));
+  print(updatedScores); // Alice: 105, Bob: 95 출력
 }
